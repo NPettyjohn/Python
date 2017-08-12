@@ -1,0 +1,45 @@
+#wrapper{
+  width: 500px;
+  height: 350px;
+  margin-top: 40px;
+  margin-left: 40px;
+  border: 2px solid black;
+  vertical-align: top;
+}
+#label_block{
+  margin-left: 20px;
+  margin-top: 20px;
+  /*border: 2px solid blue;*/
+  width: 200px;
+  display: inline-block;
+    vertical-align: top;
+}
+#input_block{
+  margin-top: 20px;
+  /*border: 2px solid blue;*/
+  width: 200px;
+  display: inline-block;
+  /*float: right;*/
+  /*vertical-align: top;*/
+}
+#comment_block{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+label, input{
+  display: block;
+  margin-top: 5px;
+  /*height:20px;*/
+}
+#comment_box{
+  margin-top: 10px;
+  height: 100px;
+  width: 400px;
+}
+#input_button{
+margin-left: 350px;
+margin-top: 40px;
+/*height: 100px;*/
+width: 100px;
+}

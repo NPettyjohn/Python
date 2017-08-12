@@ -1,0 +1,25 @@
+#wrapper{
+  margin-left: 50px;
+  margin-top: 50px;
+  border: 2px solid black;
+  width: 500px;
+}
+h1{
+  margin-left: 20px;
+}
+#results_labels{
+  margin-left: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+#results{
+  margin-left: 20px;
+  display: inline-block;
+  max-width: 300px;
+}
+a{
+  display: block;
+  margin-left: 400px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
