@@ -1,0 +1,37 @@
+#farm_area, #cave_area, #house_area, #casino_area{
+  border: 2px solid black;
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+#gold_count{
+  border: 2px solid black;
+  width: 75px;
+  height: 18px;
+  text-align: center;
+}
+#gold_count_area p{
+display: inline-block;
+vertical-align:middle;
+}
+#activity_log{
+  border: 2px solid black;
+  width: 960px;
+  height: 400px;
+  padding: 10px;
+  overflow: scroll;
+  display: block;
+}
+.find_gold_button{
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+}
+.log_green{
+  color: green;
+}
+.log_red{
+  color: red;
+}
