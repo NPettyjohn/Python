@@ -1,0 +1,21 @@
+#wrapper{
+  text-align: center;
+}
+#correct_guess{
+  font-weight: bold;
+  margin-left: 45%;
+  text-align: center;
+  background-color: green;
+  height: 100px;
+  width: 10%;
+  padding-top: 40px;
+}
+#wrong_guess{
+  font-weight: bold;
+  margin-left: 45%;
+  text-align: center;
+  background-color: red;
+  height: 100px;
+  width: 10%;
+  padding-top: 40px;
+}
