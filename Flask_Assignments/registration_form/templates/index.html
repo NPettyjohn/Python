@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  </head>
+  <body>
+    <div id="wrappper">
+      <h1>Register for our awesome new web service!</h1>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <form id="registration_form" action="/register" method="post">
+
+        <div id="label_area">
+          <label for="email">Email Address:</label>
+          <label for="first_name">First Name:</label>
+          <label for="last_name">Last Name:</label>
+          <label for="password">Password:</label>
+          <label for="confirm_password">Confirm Password:</label>
+        </div>
+
+        <div id="inputs_area">
+          <input type="email" name="email" value="">
+          <input type="text" name="first_name" value="">
+          <input type="text" name="last_name" value="">
+          <input type="password" name="password" value="">
+          <input type="password" name="confirm_password" value="">
+        </div>
+
+        <input id="submit_button" type="submit" name="submit" value="Register">
+
+
+      </form>
+    </div>
+  </body>
+</html>
