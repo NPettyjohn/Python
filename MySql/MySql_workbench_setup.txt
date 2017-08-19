@@ -1,0 +1,5 @@
+USE twitter;
+
+SELECT * FROM tweets;
+
+SELECT tweet FROM tweets WHERE ID = 1;
