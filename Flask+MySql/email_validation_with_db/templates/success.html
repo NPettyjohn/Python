@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='success.css') }}">
+    <title>Success Page</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      {%if entered_email is defined%}
+        <p>The email address you entered '{{entered_email}}' is a VALID email address! Thank you!</p>
+      {% endif %}
+      <h1>Email Addresses Entered:</h1>
+      <table>
+        {% for record in email_recordset: %}
+          <tr>
+            <td>{{ record['address'] }}</td>
+            <td>{{ record['created_at'].strftime('%m/%d/%y %I:%M%p')}}</td>
+            <td><a href={{"/delete/"+record['id']|string}}>delete</a></td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

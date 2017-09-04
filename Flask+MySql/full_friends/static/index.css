@@ -1,0 +1,46 @@
+#wrapper{
+  margin-left: 10px;
+}
+table{
+  /*height: 300px;*/
+}
+form{
+  margin-top: 50px;
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+}
+label{
+  width: 100px;
+  display: inline-block;
+}
+input{
+  width: 200px;
+
+}
+#submit_button{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 210px;
+  margin-top: 20px;
+  background-color: lightgrey;
+}
+.flash_message{
+  border: 1px solid black;
+}
+.delete_buttons{
+  width: 50px;
+  vertical-align: middle;
+  /*display: inline;*/
+}
+.delete_buttons_form{
+  margin-top: 0px;
+  width: 50px;
+  display: inline-block;
+  /*vertical-align: middle;*/
+}
+a {
+  display: inline-block;
+  vertical-align: middle;
+}

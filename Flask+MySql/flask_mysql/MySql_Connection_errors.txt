@@ -1,0 +1,21 @@
+## Error 1: database doesn't exist. Fixed by putting in correct database name
+            which does exist.
+            (Python_2.7_Flask)
+
+        File "/Users/nickpettyjohn/Desktop/DojoAssignments/Python/Virtual_Environments/Python_2.7_Flask/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+          super(Connection, self).__init__(*args, **kwargs2)
+          sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1049, "Unknown database 'mydbdddfs'")
+
+## Error 2: User that doesn't exist or is incorrect. Changed by adding correct user name.
+
+        sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'rootbeer'@'localhost' (using(Pytho(Pytho(Python_(Python_(Python_(Python_2.7_(Python_(Pytho(Pytho(Pytho(Pyt(P(P(P(P(P(P(P(P(P(P(P(P(P(P(P(Pyt(P
+
+## Error 3: Password that is incorrect. Changed by adding correct user password.
+        File "/Users/nickpettyjohn/Desktop/DojoAssignments/Python/Virtual_Environments/Python_2.7_Flask/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+        super(Connection, self).__init__(*args, **kwargs2)
+        sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+## Error 4: Changed port number to wrong port. Corrected by changing back to correct port.
+        File "/Users/nickpettyjohn/Desktop/DojoAssignments/Python/Virtual_Environments/Python_2.7_Flask/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+            super(Connection, self).__init__(*args, **kwargs2)
+        sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (61)")
