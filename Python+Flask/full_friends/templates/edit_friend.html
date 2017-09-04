@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit_friend.css') }}">
+    <title>Edit Page</title>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <form id="edit_friend_form" action="/friends/{{id}}" method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" value="{{ record_to_edit['first_name'] }}">
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" value="{{ record_to_edit['last_name'] }}">
+        <label for="email_address">Email:</label>
+        <input type="text" name="email_address" value="{{ record_to_edit['email_address'] }}">
+        <input id="submit_button" type="submit" name="submit" value="Update Friend">
+      </form>
+
+    </div>
+
+
+  </body>
+</html>
