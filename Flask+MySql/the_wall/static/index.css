@@ -1,0 +1,81 @@
+#wrapper{
+  margin-left: 100px;
+  /*margin-top: 200px;*/
+}
+h1, p, a{
+  display: inline-block;
+  margin-right: 150px;
+}
+
+
+#email_input{
+  width: 200px;
+}
+.submit{
+  display: block;
+  margin-top: 20px;
+  margin-left: 260px;
+  /*height: 500px;*/
+  width: 115px;
+  font-size: 10pt;
+  border-radius: 5px;
+}
+form{
+  width: 400px;
+  display: inline-block;
+}
+label{
+  width: 150px;
+  display: inline-block;
+  margin-top: 10px;
+}
+input{
+  width: 200px;
+}
+#already_registered{
+  display: block;
+}
+#entry_error{
+  background-color: red;
+  color: white;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  border: 2px solid black;
+  margin-left: 200px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 12pt;
+}
+#message_input{
+  height: 75px;
+  width: 400px;
+}
+#comment_input{
+  height: 75px;
+  width: 400px;
+  margin-left: 40px;
+}
+h4{
+  margin-left: 40px;
+}
+.attribution{
+  display: block;
+  font-weight: bold;
+}
+.comment_attribution{
+  display: block;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.message{
+display: block;
+margin-left: 40px;
+margin-bottom: 40px;
+}
+
+.comment{
+display: block;
+margin-left: 40px;
+margin-bottom: 40px;
+}

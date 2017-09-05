@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>The Wall</title>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p id="entry_error">{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <div id="wrapper">
+      <div id="nav_bar">
+        <h1>CodingDojo Wall</h1>
+        <p>Welcome {{session['user']}}</p>
+        <a href="/logoff">log off</a>
+      </div>
+      <form id="post_message" action="/message/post" method="post">
+        <h3>Post a message</h3>
+        <input id="message_input" type="text" name="message" value="">
+        <input class="submit" type="submit" name="submit" value="Post a message">
+      </form>
+      <div id="messages_section">
+        {%for wall_message in wall_messages%}
+          <p class="attribution">
+            {{ wall_message['first_name']}} {{ wall_message['last_name']}} - {{wall_message['created_at'].strftime('%B %-m %Y') }}
+            <span>
+              {% if wall_message['email'] == session['user'] %}
+                <a href="/message/delete/{{wall_message['message_id']}}">delete</a>
+              {% endif %}
+            </span>
+          </p>
+          <p class="message">{{wall_message['message']}}</p>
+            {% for wall_comment in wall_comments %}
+              {% if wall_comment['message_id'] == wall_message['message_id'] %}
+              <p class="comment_attribution">
+                {{ wall_comment['first_name']}} {{ wall_comment['last_name']}} - {{wall_comment['created_at'].strftime('%B %-m %Y') }}
+              </p>
+              <p class="comment">{{wall_comment['comment']}}</p>
+              {% endif %}
+            {%endfor%}
+          <form id="post_comment" action="/comment/post/{{wall_message['message_id']}}" method="post">
+            <h4>Post a comment</h4>
+            <input id="comment_input" type="text" name="comment" value="">
+            <input class="submit" type="submit" name="submit" value="Post a comment">
+          </form>
+        {%endfor%}
+      </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>login</title>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p id="entry_error">{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <div id="wrapper">
+      <div id="nav_bar">
+        <h1>CodingDojo Wall</h1>
+        <a href="/logoff">log off</a>
+      </div>
+      <form id="email_entry" action="/login_user" method="post">
+          <label for="email">Email Address:</label>
+          <input id="email_input" type="text" name="email" >
+          <label for="password">Password:</label>
+          <input type="password" name="password" value="">
+          <input class="submit" type="submit" name="sumbit" value="Log in">
+      </form>
+      <p id="already_registered">Not yet registered? <span><a href="/">Register here</a></span></p>
+    </div>
+  </body>
+</html>
